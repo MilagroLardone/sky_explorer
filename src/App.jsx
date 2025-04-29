@@ -1,14 +1,51 @@
-import "./App.css";
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import "./App.css"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+import SearchBar from "./components/SearchBar/SearchBar"
+import OfferBox from "./components/OfferBox/OfferBox"
+
+// Import images or use URLs
+const bariloche = "https://images.unsplash.com/photo-1551523713-5e4d2d73c5ca?q=80&w=2070&auto=format&fit=crop"
+const mendoza = "https://images.unsplash.com/photo-1581056771107-24695e0d96f3?q=80&w=2070&auto=format&fit=crop"
 
 function App() {
+  const offers = [
+    {
+      id: 1,
+      image: bariloche,
+      destination: "Bariloche",
+      origin: "Buenos Aires",
+      price: "1450000",
+    },
+    {
+      id: 2,
+      image: mendoza,
+      destination: "Mendoza",
+      origin: "Buenos Aires",
+      price: "650000",
+    },
+  ]
+
   return (
-    <>
+    <div className="app">
       <Header />
+      <main className="main-content">
+        <SearchBar />
+        <div className="offers-container">
+          {offers.map((offer) => (
+            <OfferBox
+              key={offer.id}
+              image={offer.image}
+              destination={offer.destination}
+              origin={offer.origin}
+              price={offer.price}
+            />
+          ))}
+        </div>
+      </main>
       <Footer />
-    </>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App
