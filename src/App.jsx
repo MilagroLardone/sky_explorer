@@ -1,12 +1,7 @@
-import "./App.css"
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
-import SearchBar from "./components/SearchBar/SearchBar"
-import OfferBox from "./components/OfferBox/OfferBox"
-
-// Import images or use URLs
-const bariloche = "https://images.unsplash.com/photo-1551523713-5e4d2d73c5ca?q=80&w=2070&auto=format&fit=crop"
-const mendoza = "https://images.unsplash.com/photo-1581056771107-24695e0d96f3?q=80&w=2070&auto=format&fit=crop"
+import "./App.css";
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   const offers = [
@@ -24,7 +19,7 @@ function App() {
       origin: "Buenos Aires",
       price: "650000",
     },
-  ]
+  ];
 
   return (
     <div className="app">
@@ -45,7 +40,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
