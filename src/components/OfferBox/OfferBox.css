@@ -1,0 +1,75 @@
+.offer-box {
+    display: flex;
+    background-color: #52A39B;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: 180px;
+  }
+  
+  .offer-image-container {
+    width: 280px;
+    height: 100%;
+    overflow: hidden;
+    border: 4px solid #428780;
+    border-radius: 8px;
+    
+  }
+  
+  .offer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .offer-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .offer-destination {
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(11, 52, 11, 0.36);
+    line-height: 34px;
+    padding-left: 60px;
+  }
+  
+  .offer-origin {
+    font-size: 16px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+  }
+  
+  .offer-price {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    text-align: right;
+    color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(11, 52, 11, 0.36);
+padding-right: 70px;
+  }
+  
+  @media (max-width: 768px) {
+    .offer-box {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .offer-image-container {
+      width: 100%;
+      height: 180px;
+    }
+  }
+  
